@@ -1,0 +1,24 @@
+<div id="tabbar">
+  <div id="tabs-n-scroll">
+  <button class="button" (mousedown)="scrollLeft(-20)" (mouseup)="stopScrolling()" [ngClass]="{'hidden' : !needScrolling() }" [disabled]="scrollLeftPixel <= 0">
+    <fa-icon icon="angle-left"><</fa-icon>
+  </button>
+
+  <div id="onglets" #ongletsDiv>
+    <div *ngFor="let onglet of onglets; let i = index" class="tab" (click)="onClickOnglet(onglet)"
+         [attr.id]="'a'+i"
+         [ngClass]="ongletService.idOngletSelected === onglet.id ? 'selected':'pointer'">
+      <fa-icon [icon]="onglet.icon"></fa-icon>
+      {{onglet.label}}
+      <fa-icon class="close-tab" *ngIf="onglet.id !== 'recherche'" (click)="closeOnglet(onglet)" icon="times"></fa-icon>
+    </div>
+  </div>
+
+  <button [ngClass]="{'hidden' : !needScrolling() }" class="button button-left" (mousedown)="scrollLeft(20)" (mouseup)="stopScrolling()" [disabled]="cannotScrollRight()">
+    <fa-icon icon="angle-right"><</fa-icon>
+  </button>
+  </div>
+  <div class="close-all-tabs" *ngIf="onglets.length > 1">
+    <fa-icon icon="times" class="pointer is-size-5 has-text-danger" title="Fermer tous les onglets" (click)="closeAllOnglets()"></fa-icon>
+  </div>
+</div>

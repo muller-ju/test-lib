@@ -1,0 +1,7 @@
+@import "palette";
+
+a.sym, .link-sym {
+  @extend .pointer;
+  color: $orange;
+  text-decoration: underline;
+}

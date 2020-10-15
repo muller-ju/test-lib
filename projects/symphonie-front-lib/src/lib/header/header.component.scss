@@ -1,0 +1,96 @@
+@import 'palette';
+
+nav {
+  background: white;
+  height: 66px;
+}
+
+p {
+  color: $darkestGray;
+}
+
+.navbar-item img {
+  max-height: 48px;
+  max-width: 48px;
+}
+
+.modal-card-head {
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  margin-left: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+li .ng-fa-icon {
+  font-size: 1.1em;
+  margin-right: 3px;
+}
+
+.hamburger-button {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.ng-fa-icon {
+  color: $darkestGray;
+  font-size: 1.5em;
+}
+
+.close-hamburger-button {
+  margin-left: 15px;
+  width: 30px !important;
+  height: 30px !important;
+  margin-right: -4px;
+  cursor: pointer;
+}
+
+.hamburger-menu {
+  padding: 10px;
+  background: $darkestGray;
+  position: absolute;
+  z-index: 10;
+  color: white;
+  width: 328px;
+}
+
+.hamburger-menu .ng-fa-icon {
+  color: white;
+}
+
+.hamburger-menu .menu-title {
+  font-weight: bold;
+  vertical-align: center;
+  margin-left: 0;
+}
+
+.hamburger-menu .menu-title:not(:first-child) {
+  margin-top: 2em;
+}
+
+input {
+  width: initial;
+}
+
+
+.isDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+a[aria-disabled="true"] {
+  color: currentColor;
+  display: inline-block;  /* For IE11/ MS Edge bug */
+  pointer-events: none;
+  text-decoration: none;
+}

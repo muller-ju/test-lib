@@ -1,0 +1,82 @@
+@import 'palette';
+
+$tabBorderTop: 4px;
+$tabHeight: 28px;
+$tabMarginTop: 8px;
+$tabbarBackgroundHeight: $tabMarginTop+$tabBorderTop+$tabHeight;
+
+#tabs-n-scroll {
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#onglets {
+  background: $darkestGray;
+  height: $tabbarBackgroundHeight;
+  display: flex;
+  font-size: 0.9em;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#tabbar {
+  background: $darkestGray;
+  height: $tabbarBackgroundHeight;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+
+#onglets .ng-fa-icon {
+  margin-right: 5px;
+  font-size: 1.1em;
+}
+
+
+#onglets .tab {
+  margin-top: $tabMarginTop;
+  border-top: $tabBorderTop solid $darkGray;
+  line-height: $tabHeight;
+  background: $lightestGray;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex: 0 1 auto;
+  color: $darkGray;
+}
+
+#onglets .tab.selected {
+  border-top: $tabBorderTop solid $orange;
+  color: $orange;
+  cursor: default;
+}
+
+#onglets .close-tab {
+  padding-left: 15px;
+  padding-top: 2px;
+  cursor: pointer;
+}
+
+#onglets .tab.error {
+  border-top: $tabBorderTop solid $red;
+  color: $red;
+  cursor: default;
+}
+
+.button {
+  height: $tabBorderTop+$tabHeight;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.close-all-tabs {
+  margin-right: 15px;
+}
+
+.hidden {
+  visibility: hidden;
+}

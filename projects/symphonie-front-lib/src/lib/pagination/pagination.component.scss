@@ -1,0 +1,6 @@
+@import "palette";
+
+.pagination-link.is-current {
+  background-color: $orange;
+  border-color: $orange;
+}

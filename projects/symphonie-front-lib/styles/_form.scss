@@ -1,0 +1,46 @@
+@import "palette";
+
+.input {
+  border-color: $lightGray;
+  box-shadow: none;
+  height: 2.5em;
+}
+
+.input:focus {
+  border-color: $orange;
+  box-shadow: none;
+}
+
+.input.error {
+  border-color: $red;
+}
+
+label {
+  color: $darkestGray;
+}
+
+select:focus {
+  border-color: $orange !important;
+  box-shadow: none;
+}
+
+.error-message {
+  color: $red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.select {
+  box-shadow: none;
+  margin-bottom: 1.2em;
+}
+
+.select select {
+  border-color: $mediumGray;
+  appearance: none;
+}
+
+select:hover {
+  border-color: $mediumGray;
+  box-shadow: none;
+}

@@ -1,0 +1,15 @@
+#dev-ribbon {
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  background-color: #c00;
+  z-index: 9999;
+  position: fixed;
+  font-weight: bold;
+  text-shadow: 0 0 5px #444;
+  opacity: 1;
+}
+
+#text-inside {
+  border: 1px white dashed;
+}

@@ -1,0 +1,27 @@
+<form [formGroup]="barreRechercheForm">
+    <div class="is-flex columns">
+        <div class="column" [ngClass]="criteria.divClass" *ngFor="let criteria of criterias">
+            <input *ngIf="criteria.type == 'text'" [ngClass]="criteria.objectClass" type="text" [placeholder]="criteria.libelle" [formControlName]="criteria.id" (change)="objectChange(criteria.id)" [id]="criteria.id">
+            <input *ngIf="criteria.type == 'date'" #datePicker [ngClass]="criteria.objectClass" [type]="criteria.libelle?'text':'date'" class="datePicker" [placeholder]="criteria.libelle?criteria.libelle:''" onfocus="(this.type='date')" [formControlName]="criteria.id" (change)="objectChange(criteria.id)" [id]="criteria.id">
+
+
+
+            <select *ngIf="criteria.isList()" [ngClass]="criteria.objectClass"
+                    [formControlName]="criteria.id" (change)="objectChange(criteria.id)"
+                    [id]="criteria.id">
+                <option *ngIf="criteria.libelle" [ngValue]="null" disabled selected>{{criteria.libelle}}</option>
+                <option *ngFor="let listElement of criteria.getListElements()" [ngValue]="listElement.key">
+                    {{listElement.value}}
+                </option>
+            </select>
+        </div>
+        <div class="column is-flex-fullhd">
+            <button (click)="lancerRecherche()" class="button button-sym mr-2 mb-1" id="rechercherBouton">
+                Rechercher
+            </button>
+            <button *ngIf="resetRechercheEmitter.observers.length != 0" (click)="resetRecherche()" class="button button-sym" id="resetBouton">
+                Reset
+            </button>
+        </div>
+    </div>
+</form>

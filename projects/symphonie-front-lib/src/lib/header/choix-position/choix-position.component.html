@@ -1,0 +1,26 @@
+<div *ngIf="currentUser" class="modal" [ngClass]="{'is-active' : isOpened}">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <div>
+      <header class="modal-card-head default">
+        <p id="login-title" class="modal-card-title">Choix de la position</p>
+        <fa-icon icon="times" class="close-button"  aria-label="close"
+             (click)="close($event)">
+
+        </fa-icon>
+      </header>
+    </div>
+    <section class="modal-card-body default">
+      <div class="has-text-centered is-vcentered" id="selectionPosition">
+        <label for="choixPosition">Choix de la position :</label>
+        <div class="select is-vcentered" style="margin-left: 0.9em;">
+          <select id="choixPosition" (change)="changePosition($event)">
+            <option *ngFor="let position of currentUser.positions"
+                    [selected]="currentUser.currentPosition.idPosition == position.idPosition"
+                    [value]="position.idPosition">{{position.libellePosition}}</option>
+          </select>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

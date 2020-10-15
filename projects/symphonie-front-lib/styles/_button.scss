@@ -1,0 +1,66 @@
+@import "palette";
+
+.button-sym, .button-sym:hover, .button-sym:focus, .button-sym[disabled] {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  background-color: $orange;
+  color: white;
+  height: 40px;
+  border: 2px solid $orange;
+  padding: 0 2.5rem;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.button-sym.is-primary,
+.button-sym:focus:not(:active),
+.is-primary.button-sym:hover,
+.is-primary.button-sym:focus,
+.is-primary.button-sym[disabled],
+.button-sym.button.is-primary:focus:not(:active),
+.button-sym.button.is-primary.is-focused:not(:active), {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  background-color: $orange;
+  color: white;
+  height: 40px;
+  border: 2px solid $orange;
+  padding: 0 2.5rem;
+  box-shadow: none;
+}
+
+.secondary-sym {
+  &.button-sym {
+    background: white;
+    color: $orange;
+
+  }
+
+  &.danger-sym {
+    background: white;
+    color: $red;
+    border-color: red;
+  }
+
+  &.success-sym {
+    background: white;
+    color: $green;
+    border-color: $green;
+  }
+}
+
+
+.danger-sym, .danger-sym:hover, .danger-sym:focus {
+  @extend .button-sym;
+  background: $red;
+  color: white;
+  border: 2px solid $red;
+}
+
+.success-sym, .success-sym:hover, .success-sym:focus {
+  @extend .button-sym;
+  background: $green;
+  color: white;
+  border: none !important;
+}
+

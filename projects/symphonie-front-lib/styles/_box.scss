@@ -1,0 +1,27 @@
+@import "palette";
+
+.box-sym {
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid $lightGray;
+  border-left: 2px solid $lightGray;
+  border-right: 2px solid $lightGray;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  box-shadow: 0 5px 3px -3px $lightGray;
+  min-height: 243px;
+  margin-top: 20px;
+  padding: 0.7rem;
+
+  .box-title {
+    color: $darkestGray;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .box-body {
+    margin-top: 15px;
+    font-size: 0.9em;
+  }
+
+}

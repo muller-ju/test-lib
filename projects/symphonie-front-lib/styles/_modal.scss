@@ -1,0 +1,54 @@
+@import "palette";
+
+.close-button {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white
+}
+
+.default.modal-card-head {
+  background: $darkestGray;
+}
+
+.confirm.modal-card-head {
+  background: $darkestGray;
+}
+
+.cancel.modal-card-head {
+  background: $darkestGray;
+}
+.info.modal-card-head {
+  background: $darkestGray;
+}
+
+
+.modal-card {
+  width: 1000px;
+  max-height: 450px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+
+.modal-card-head {
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+
+.modal-card-head p {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.modal-card-head i {
+  color: white;
+}
+
+.with-labels {
+  font-weight: bold;
+}

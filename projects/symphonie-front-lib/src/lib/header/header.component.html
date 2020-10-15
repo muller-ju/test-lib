@@ -1,0 +1,138 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+
+  <div class="navbar-brand">
+    <div class="navbar-item logo">
+      <fa-icon data-tnr="open-menu" icon="bars" class="hamburger-button" (click)="openMenu()" *ngIf="!menuIsOpen"></fa-icon>
+      <fa-icon data-tnr="close-menu" icon="times" class="close-hamburger-button" alt="Fermer l'hamburger" (click)="closeMenu()" *ngIf="menuIsOpen">
+      </fa-icon>
+    </div>
+    <div class="navbar-item"><img src="data:image/png;base64,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" alt="Logo Symphonie"></div>
+  </div>
+  <div id="navbar" class="navbar-menu">
+    <div class="navbar-start">
+      <p class="navbar-item"></p>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item" *ngIf="currentUser">
+        <p>{{currentUser.getFullName()}}<br>
+          <span (click)="openModalChoixPosition()"
+                class="pointer">{{currentUser?.currentPosition?.libellePosition}}</span></p>
+      </div>
+      <div class="navbar-item" *ngIf="isDev && currentUser">
+        <fa-icon icon="user-shield" class="pointer" id="switchAdmin" [ngClass]="{'has-text-warning':authentificationService.isAdmin()}"
+                 (click)="roleAdmin()"></fa-icon>
+      </div>
+      <div class="navbar-item">
+        <fa-icon icon="sign-out-alt" class="pointer" id="logoutButton" *ngIf="currentUser"
+                 (click)="logout()"></fa-icon>
+      </div>
+      <div class="navbar-item">
+        <fa-icon data-tnr="version" icon="info-circle" class="pointer" (click)="onClickVersion.emit(true)"></fa-icon>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="hamburger-menu" *ngIf="menuIsOpen">
+    <ul>
+      <li class="menu-title" disableLink target="tempo">
+        <fa-icon [icon]="['fas', 'search']"></fa-icon>
+        <a (click)="goTo('recherchePersonne')">Rechercher une personne</a>
+      </li>
+
+
+
+      <li class="menu-title">
+        <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
+        Bannettes individuelles
+      </li>
+      <li  disableLink target="tempo">
+        <a (click)="goTo('bannetteCollaborateur')">Collaborateur</a>
+      </li>
+      <li disableLink target="tempo">
+        <a (click)="goTo('bannetteEquipe')">Équipe</a>
+      </li>
+      <li target="tempo" *ngIf="hasAccessToControleMedical()">
+        <a (click)="goTo('bannetteMedical')">Contrôle Médical</a>
+      </li>
+
+      <li class="menu-title" disableLink target="tempo">
+        <fa-icon [icon]="['fas', 'search']"></fa-icon>
+        Recherche par proposition individuelle
+      </li>
+      <li>
+        <input disableLink target="tempo" type="text" class="input" [(ngModel)]="numeroPropositions" placeholder="N° Proposition" (keydown.enter)="searchPropo()">
+      </li>
+      <li class="menu-title" disableLink target="maestro">
+        <fa-icon [icon]="['fas', 'search']"></fa-icon>
+        <a (click)="goTo('rechercheProposition')">Recherche multicritère</a>
+      </li>
+
+
+      <li class="menu-title" disableLink target="tempo">
+        <fa-icon [icon]="['fas', 'search']"></fa-icon>
+        Recherche par contrat collectif
+      </li>
+      <li disableLink target="tempo">
+        <input type="text" class="input" [(ngModel)]="numeroJuridique" placeholder="N° Contrat" (keydown.enter)="searchContrat()">
+      </li>
+      <li class="menu-title" disableLink target="contralto-coll">
+        <fa-icon [icon]="['far', 'building']"></fa-icon>
+        <a (click)="goTo('demandeDeCourtage')">Liste des demandes de saisie</a>
+      </li>
+
+      <ng-template [ngIf]="authentificationService.isAdmin()">
+        <li class="menu-title" >
+          <fa-icon [icon]="['fas', 'cog']"></fa-icon>
+          Paramétrage
+        </li>
+        <li  disableLink target="maestro">
+          <a (click)="goTo('parametrageMaestro')">Souscription Individuelle</a>
+        </li>
+        <li disableLink target="contralto-coll">
+          <a (click)="goTo('parametrageContraltoColl')">Souscription Collective</a>
+        </li>
+        <li disableLink target="tempo">
+          <a (click)="goTo('adhesionsWebUrl')">Suivi des adhésions web</a>
+        </li>
+        <li disableLink target="tempo">
+          <a (click)="goTo('configurationUrl')">Suite symphonie</a>
+        </li>
+      </ng-template>
+
+      <li class="menu-title">
+        <fa-icon [icon]="['far', 'arrow-alt-circle-right']"></fa-icon>
+        Accès
+      </li>
+      <li disableLink target="contralto">
+        <a (click)="goTo('contraltoUrl', true)">
+          Contralto
+        </a>
+      </li>
+      <li disableLink target="concerto">
+        <a (click)="goTo('concertoUrl',true)">
+          Concerto
+        </a>
+      </li>
+      <li disableLink target="siebel">
+        <a (click)="goTo('siebelUrl',true)">
+          Siebel
+        </a>
+      </li>
+      <li disableLink target="avise">
+        <a (click)="goTo('aviseUrl',true)">
+          AVISÉ
+        </a>
+      </li>
+
+      <li class="menu-title">
+        <fa-icon [icon]="['far', 'file-alt']"></fa-icon>
+        Docs
+      </li>
+      <li><a (click)="goToCcn()">CCN</a></li>
+      <li><a (click)="goToMarcheCollectif()">Marché collectif</a></li>
+    </ul>
+</div>
+
+<symphonie-choix-position [currentUser]="currentUser" [(isOpened)]="isModalChoixPositionOpened"></symphonie-choix-position>
+

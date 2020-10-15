@@ -1,0 +1,31 @@
+@import "palette";
+
+.block-sym {
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  font-size: 0.9em;
+  background: $darkGray;
+  color: white;
+  border-radius: 3px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  .fa-icon {
+    font-size: 1.4em;
+  }
+
+}
+
+.collapsed {
+  height: 0;
+  overflow-y: hidden;
+  transition: height .2s ease;
+}
+
+.expanded {
+  background-color: $orange !important;
+}
